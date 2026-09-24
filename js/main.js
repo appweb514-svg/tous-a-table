@@ -38,10 +38,14 @@ function syncHeroStats() {
     rating: recipes.length ? recipes.reduce((sum, r) => sum + (Number.parseFloat(r.rating) || 0), 0) / recipes.length : 0,
     categories: new Set(recipes.map(r => r.cat).filter(Boolean)).size,
   };
+  counterObserver.disconnect();
+  counterAnimation += 1;
   document.querySelectorAll('[data-stat]').forEach(el => {
     const value = values[el.dataset.stat] ?? 0;
     el.dataset.count = String(value);
-    if (el.dataset.counted === 'true') el.textContent = el.dataset.decimal === 'true' ? value.toFixed(1) : value;
+    el.dataset.counted = 'false';
+    el.textContent = el.dataset.decimal === 'true' ? '0.0' : '0';
+    counterObserver.observe(el);
   });
 }
 
@@ -279,7 +283,9 @@ function observeReveals() {
 }
 
 /* ═══════════════════════ COUNTER ANIMATION ═══════════════════════ */
+let counterAnimation = 0;
 const counterObserver = new IntersectionObserver((entries) => {
+  const animation = counterAnimation;
   entries.forEach(entry => {
     if (entry.isIntersecting) {
       const el = entry.target;
@@ -290,6 +296,7 @@ const counterObserver = new IntersectionObserver((entries) => {
       const start = performance.now();
 
       function tick(now) {
+        if (animation !== counterAnimation) return;
         const elapsed = now - start;
         const progress = Math.min(elapsed / duration, 1);
         const eased = 1 - Math.pow(1 - progress, 4);
@@ -308,8 +315,6 @@ const counterObserver = new IntersectionObserver((entries) => {
     }
   });
 }, { threshold: 0.5 });
-
-document.querySelectorAll('.hero-stat-num').forEach(el => counterObserver.observe(el));
 
 /* ═══════════════════════ MODAL ═══════════════════════ */
 function getModalMediaHTML(r) {
