@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Tous à table — Recettes originales, testées et approuvées. Cuisine maison, produits de saison, créations qui donnent envie.">
+<meta name="theme-color" content="#0C0C0B">
+<meta name="color-scheme" content="light">
+<meta name="site-mode" content="local">
+<meta name="author" content="Tous à table">
+<title>Tous à table — Recettes originales qui donnent envie</title>
+<link rel="canonical" href="https://appweb514-svg.github.io/tous-a-table/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:title" content="Tous à table — Recettes originales qui donnent envie">
+<meta property="og:description" content="Des recettes maison, originales et faciles à cuisiner.">
+<meta property="og:url" content="https://appweb514-svg.github.io/tous-a-table/">
+<meta property="og:image" content="https://appweb514-svg.github.io/tous-a-table/img/hero.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preload" as="image" href="img/hero.jpg">
+<link rel="icon" href="img/logo-mark.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500;1,9..144,600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+<div class="page-loader" id="pageLoader" role="status" aria-live="polite">
+  <div class="loader-brand">
+    <div class="loader-mark" aria-hidden="true">
+      <img class="logo-icon" src="img/logo-mark.svg" alt="" width="18" height="18">
+    </div>
+    Tous à table
+  </div>
+  <div class="loader-bar" aria-hidden="true"><div class="loader-bar-fill"></div></div>
+</div>
+
+<a href="#main-content" class="skip-link">Aller au contenu principal</a>
+
+<!-- ═══════════ HEADER ═══════════ -->
+<header class="site-header" id="siteHeader" role="banner">
+  <div class="header-topbar">
+    <span class="header-topbar-dot" aria-hidden="true"></span>
+    <span>Nouvelle collection <strong>Été 2026</strong> — 12 recettes exclusives à découvrir</span>
+  </div>
+
+  <div class="header-main">
+    <div class="header-ambient" aria-hidden="true">
+      <img class="header-float header-float--herb" src="img/illustrations/herb.svg" alt="" width="52" height="52">
+      <img class="header-float header-float--tomato" src="img/illustrations/tomato.svg" alt="" width="44" height="44">
+      <img class="header-float header-float--citrus" src="img/illustrations/citrus.svg" alt="" width="40" height="40">
+      <img class="header-float header-float--whisk" src="img/illustrations/whisk.svg" alt="" width="48" height="48">
+    </div>
+    <div class="header-shimmer" aria-hidden="true"></div>
+
+    <div class="header-inner">
+      <a href="#" class="logo" aria-label="Tous à table — Accueil">
+        <span class="logo-mark" aria-hidden="true">
+          <img class="logo-icon" src="img/logo-mark.svg" alt="" width="22" height="22">
+        </span>
+        <span class="logo-text"><span>Tous</span> <em>à table</em></span>
+      </a>
+
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Ouvrir le menu" aria-expanded="false" onclick="toggleMobileNav()">
+        <span></span>
+      </button>
+
+      <nav class="main-nav" id="mainNav" role="navigation" aria-label="Navigation principale">
+        <a href="#" class="active">Accueil</a>
+        <a href="#recettes" onclick="closeMobileNav()">Recettes</a>
+        <a href="#recettes" onclick="filterByCategory('entree',document.querySelector('[data-cat=entree]'));closeMobileNav()">Entrées</a>
+        <a href="#recettes" onclick="filterByCategory('plat',document.querySelector('[data-cat=plat]'));closeMobileNav()">Plats</a>
+        <a href="#recettes" onclick="filterByCategory('dessert',document.querySelector('[data-cat=dessert]'));closeMobileNav()">Desserts</a>
+        <a href="#recettes" onclick="filterByCategory('boisson',document.querySelector('[data-cat=boisson]'));closeMobileNav()">Boissons</a>
+      </nav>
+
+      <div class="header-actions">
+        <div class="header-gallery" aria-hidden="true">
+          <div class="header-gallery-item"><img src="img/tartare.jpg" alt="" width="36" height="36" loading="eager"></div>
+          <div class="header-gallery-item"><img src="img/fondant.jpg" alt="" width="36" height="36" loading="eager"></div>
+          <div class="header-gallery-item"><img src="img/saumon.jpg" alt="" width="36" height="36" loading="eager"></div>
+        </div>
+        <div class="search-wrap">
+          <label for="searchInput" class="sr-only">Rechercher une recette</label>
+          <input type="search" id="searchInput" placeholder="Rechercher…" oninput="filterRecipes()" aria-label="Rechercher une recette" autocomplete="off">
+          <span class="search-icon" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+          </span>
+        </div>
+        <a href="#newsletter" class="btn btn-primary magnetic" data-requires-api>S'abonner</a>
+        <a href="/compte" class="btn btn-ghost account-link" data-requires-api>Mon compte</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-nav-overlay" id="mobileNavOverlay" onclick="closeMobileNav()" aria-hidden="true"></div>
+
+<div class="mobile-search-bar" aria-label="Recherche mobile">
+  <div class="search-wrap">
+    <label for="mobileSearchInput" class="sr-only">Rechercher une recette</label>
+    <input type="search" id="mobileSearchInput" placeholder="Rechercher une recette…" oninput="filterRecipes(this.value)" autocomplete="off">
+    <span class="search-icon" aria-hidden="true">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+    </span>
+  </div>
+</div>
+
+<!-- ═══════════ HERO ═══════════ -->
+<section class="hero" aria-labelledby="hero-title">
+  <div class="hero-photo" aria-hidden="true">
+    <img src="img/hero.jpg" alt="" loading="eager" decoding="async">
+  </div>
+  <div class="hero-mesh" aria-hidden="true"></div>
+  <div class="hero-grain" aria-hidden="true"></div>
+  <div class="hero-line" aria-hidden="true"></div>
+
+  <div class="hero-grid">
+    <div class="hero-content reveal">
+      <span class="hero-badge">
+        <span class="hero-badge-dot" aria-hidden="true"></span>
+        Nouveau · Été 2026
+      </span>
+      <h1 id="hero-title">Des recettes <span class="accent">originales</span><br>qui donnent envie</h1>
+      <p class="hero-subtitle">Chaque jour, explorez des créations culinaires uniques, testées et approuvées. Du fait-maison qui fait voyager les papilles.</p>
+      <div class="hero-cta">
+        <a href="#recettes" class="btn btn-accent btn-lg magnetic">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+          Découvrir les recettes
+        </a>
+        <a href="#featured" class="btn-outline-white">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          Les coups de cœur
+        </a>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <div class="hero-stat-num" data-stat="count" data-count="0">0</div>
+          <div class="hero-stat-label">Recettes disponibles</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-num" data-stat="rating" data-count="0" data-decimal="true">0</div>
+          <div class="hero-stat-label">Note moyenne</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-num" data-stat="categories" data-count="0">0</div>
+          <div class="hero-stat-label">Catégories</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-visual reveal reveal-delay-2" aria-hidden="true">
+      <div class="hero-card hero-card-main">
+        <img class="hero-card-img" src="img/tartare.jpg" alt="" loading="eager" decoding="async">
+        <div class="hero-card-label">Tartare de crevettes, mangue & citron vert</div>
+      </div>
+      <div class="hero-card hero-card-sm">
+        <img class="hero-card-img" src="img/fondant.jpg" alt="" loading="eager" decoding="async">
+        <div class="hero-card-label">Fondant au chocolat</div>
+      </div>
+      <div class="hero-card hero-card-sm">
+        <img class="hero-card-img" src="img/saumon.jpg" alt="" loading="eager" decoding="async">
+        <div class="hero-card-label">Saumon laqué au miso</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ MAIN CONTENT ═══════════ -->
+<main id="main-content">
+  <div class="site-error" id="siteError" role="alert" hidden>
+    <strong>Le catalogue est momentanément indisponible.</strong>
+    <button class="btn btn-ghost" type="button" onclick="retryRecipes()">Réessayer</button>
+  </div>
+
+  <!-- CATEGORIES -->
+  <section class="section section-categories" style="padding-bottom:0" aria-labelledby="cat-title">
+    <div class="section-inner">
+      <div class="section-header">
+        <div>
+          <div class="section-tag">Explorez</div>
+          <h2 class="section-title" id="cat-title">Toutes <span class="italic">nos recettes</span></h2>
+        </div>
+        <div class="section-illustration reveal" aria-hidden="true">
+          <img src="img/illustrations/herb.svg" alt="" width="48" height="48">
+        </div>
+      </div>
+      <div class="cat-bar-wrap">
+        <div class="cat-bar" id="categoryFilters" role="tablist" aria-label="Filtrer par catégorie">
+          <button type="button" class="cat-pill active" role="tab" aria-selected="true" data-cat="all">Tout voir</button>
+          <button type="button" class="cat-pill" role="tab" aria-selected="false" data-cat="entree">Entrées</button>
+          <button type="button" class="cat-pill" role="tab" aria-selected="false" data-cat="plat">Plats</button>
+          <button type="button" class="cat-pill" role="tab" aria-selected="false" data-cat="dessert">Desserts</button>
+          <button type="button" class="cat-pill" role="tab" aria-selected="false" data-cat="boisson">Boissons</button>
+          <button type="button" class="cat-pill" role="tab" aria-selected="false" data-cat="rapide">−30 min</button>
+          <button type="button" class="cat-pill" role="tab" aria-selected="false" data-cat="vegetarien">Végétarien</button>
+          <button type="button" class="cat-pill" role="tab" aria-selected="false" data-cat="gourmand">Gourmand</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURED -->
+  <section class="section" id="featured" aria-labelledby="featured-title">
+    <div class="section-inner">
+      <div class="section-header">
+        <div>
+          <div class="section-tag">Sélection</div>
+          <h2 class="section-title" id="featured-title">Les <span class="italic">coups de cœur</span> du chef</h2>
+        </div>
+      </div>
+
+      <div class="featured-grid">
+        <article class="featured-card featured-main reveal tilt-card" data-cats="entree" data-recipe-id="recipe-1" onclick="openRecipeById('recipe-1')" role="button" tabindex="0" aria-label="Voir la recette : Tartare de crevettes marinées, mangue et citron vert">
+          <div class="featured-img-wrap">
+            <img class="featured-img" src="img/tartare.jpg" alt="" loading="lazy" decoding="async">
+            <div class="featured-img-overlay" aria-hidden="true"></div>
+            <span class="featured-badge">Coup de cœur</span>
+            <span class="featured-time">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+              <span class="featured-time-value">20 min</span>
+            </span>
+          </div>
+          <div class="featured-body">
+            <div class="featured-label">Entrée · 20 min</div>
+            <h3 class="featured-title">Tartare de crevettes marinées, mangue et citron vert</h3>
+            <p class="featured-desc">Crevettes juste saisies, mangue bien mûre, gingembre frais et coriandre. Une entrée fraîche et élégante aux notes exotiques.</p>
+            <div class="featured-meta">
+              <span data-featured-meta="persons">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+                <span data-featured-value>4 personnes</span>
+              </span>
+              <span data-featured-meta="price">
+                <span class="price-icon" aria-hidden="true">€</span>
+                <span data-featured-value>≈ 14 €</span>
+              </span>
+              <span data-featured-meta="rating">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <span data-featured-value>4.9</span>
+              </span>
+              <span data-featured-meta="tags"><span data-featured-value>Entrée · Été · Sans gluten</span></span>
+            </div>
+          </div>
+        </article>
+
+        <article class="featured-card reveal reveal-delay-1 tilt-card" data-cats="entree vegetarien rapide" data-recipe-id="recipe-2" onclick="openRecipeById('recipe-2')" role="button" tabindex="0" aria-label="Voir la recette : Velouté glacé de petits pois à la menthe et feta">
+          <div class="featured-img-wrap">
+            <img class="featured-img" src="img/veloute.jpg" alt="" loading="lazy" decoding="async">
+            <div class="featured-img-overlay" aria-hidden="true"></div>
+            <span class="featured-badge">Rapide</span>
+            <span class="featured-time">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+              <span class="featured-time-value">15 min</span>
+            </span>
+          </div>
+          <div class="featured-body">
+            <div class="featured-label">Entrée · 15 min</div>
+            <h3 class="featured-title">Velouté glacé de petits pois à la menthe et feta</h3>
+            <p class="featured-desc">Un velouté froid d'une fraîcheur incomparable. Petits pois croquants, menthe du jardin et feta émiettée.</p>
+            <div class="featured-meta">
+              <span data-featured-meta="persons"><span data-featured-value>4 personnes</span></span>
+              <span data-featured-meta="price"><span class="price-icon" aria-hidden="true">€</span><span data-featured-value>≈ 7 €</span></span>
+              <span data-featured-meta="rating"><span data-featured-value>4.6</span></span>
+              <span data-featured-meta="tags"><span data-featured-value>Entrée · Végétarien · Rapide</span></span>
+            </div>
+          </div>
+        </article>
+
+        <article class="featured-card reveal reveal-delay-2 tilt-card" data-cats="dessert gourmand" data-recipe-id="recipe-8" onclick="openRecipeById('recipe-8')" role="button" tabindex="0" aria-label="Voir la recette : Fondant au chocolat noir, cœur caramel beurre salé">
+          <div class="featured-img-wrap">
+            <img class="featured-img" src="img/fondant.jpg" alt="" loading="lazy" decoding="async">
+            <div class="featured-img-overlay" aria-hidden="true"></div>
+            <span class="featured-badge">Gourmand</span>
+            <span class="featured-time">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+              <span class="featured-time-value">35 min</span>
+            </span>
+          </div>
+          <div class="featured-body">
+            <div class="featured-label">Dessert · 35 min</div>
+            <h3 class="featured-title">Fondant au chocolat noir, cœur caramel beurre salé</h3>
+            <p class="featured-desc">Ganache intense au chocolat 70% et cœur coulant au caramel beurre salé. Le contraste chaud-fondant qui fait chavirer.</p>
+            <div class="featured-meta">
+              <span data-featured-meta="persons"><span data-featured-value>6 personnes</span></span>
+              <span data-featured-meta="price"><span class="price-icon" aria-hidden="true">€</span><span data-featured-value>≈ 8 €</span></span>
+              <span data-featured-meta="rating"><span data-featured-value>4.9</span></span>
+              <span data-featured-meta="tags"><span data-featured-value>Dessert · Gourmand · Chocolat</span></span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- RECIPE GRID -->
+  <section class="section" id="recettes" aria-labelledby="grid-title" style="padding-top:0">
+    <div class="section-inner">
+      <div class="section-header">
+        <div>
+          <div class="section-tag">À découvrir</div>
+          <h2 class="section-title" id="grid-title">Encore plus <span class="italic">d'inspiration</span></h2>
+        </div>
+        <span class="section-count" id="recipeCount" aria-live="polite">12 recettes</span>
+      </div>
+      <div class="recipe-grid" id="recipeGrid" role="list" aria-label="Grille de recettes"></div>
+      <div class="no-results" id="noResults" role="status">
+        <div class="no-results-icon" aria-hidden="true">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+        </div>
+        <h3>Aucune recette trouvée</h3>
+        <p>Essayez un autre terme ou une autre catégorie.</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ═══════════ NEWSLETTER ═══════════ -->
+<section class="newsletter" id="newsletter" aria-labelledby="nl-title" data-requires-api>
+  <div class="newsletter-bg" aria-hidden="true"></div>
+  <div class="newsletter-card reveal-scale">
+    <div class="newsletter-illustration" aria-hidden="true">
+      <img src="img/illustrations/whisk.svg" alt="" width="64" height="64">
+    </div>
+    <h2 id="nl-title">Recevez nos meilleures recettes</h2>
+    <p>Chaque semaine, une sélection de recettes exclusives directement dans votre boîte mail. Gratuit, et désabonnement en un clic.</p>
+    <form class="newsletter-form" onsubmit="subscribeNewsletter(event)" aria-label="Inscription newsletter">
+      <label for="newsletterEmail" class="sr-only">Votre adresse email</label>
+      <input type="email" id="newsletterEmail" placeholder="votre@email.com" required autocomplete="email">
+      <button type="submit">Je m'abonne</button>
+    </form>
+    <div class="newsletter-success" id="newsletterSuccess" role="status">Merci ! Vous êtes bien inscrit(e) à notre newsletter.</div>
+  </div>
+</section>
+
+<!-- ═══════════ FOOTER ═══════════ -->
+<footer class="site-footer" role="contentinfo">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <h3>
+        <img class="logo-icon logo-icon--footer" src="img/logo-mark.svg" alt="" width="20" height="20">
+        Tous à table
+      </h3>
+      <p>Le blog qui célèbre la cuisine maison, les produits de saison et les recettes qui font vibrer les papilles. Cuisinez, partagez, régalez-vous.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Recettes</h4>
+      <ul>
+        <li><a href="#recettes">Entrées</a></li>
+        <li><a href="#recettes">Plats</a></li>
+        <li><a href="#recettes">Desserts</a></li>
+        <li><a href="#recettes">Boissons</a></li>
+        <li><a href="#recettes">Végétarien</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>À propos</h4>
+      <ul>
+        <li><a href="#">Notre histoire</a></li>
+        <li><a href="#">L'équipe</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Presse</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Légal</h4>
+      <ul>
+        <li><a href="#">Mentions légales</a></li>
+        <li><a href="#">Confidentialité</a></li>
+        <li><a href="#">Cookies</a></li>
+        <li><a href="#">CGU</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Tous à table — Fait avec soin et de bons produits</span>
+    <div class="footer-social">
+      <a href="#" aria-label="Instagram" title="Instagram">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+      </a>
+      <a href="#" aria-label="Pinterest" title="Pinterest">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.373 0 0 5.372 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738a.36.36 0 0 1 .083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.631-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"/></svg>
+      </a>
+      <a href="#" aria-label="YouTube" title="YouTube">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+      </a>
+      <a href="#" aria-label="TikTok" title="TikTok">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1v-3.5a6.37 6.37 0 0 0-.79-.05A6.34 6.34 0 0 0 3.15 15.2a6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.34-6.34V8.87a8.28 8.28 0 0 0 4.83 1.54V7a4.85 4.85 0 0 1-1.07-.31z"/></svg>
+      </a>
+    </div>
+  </div>
+</footer>
+
+<!-- ═══════════ RECIPE MODAL ═══════════ -->
+<div class="modal-overlay" id="modalOverlay" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-describedby="modalDescription" onclick="closeModal(event)">
+  <div class="modal" id="recipeModal" onclick="event.stopPropagation()">
+    <button class="modal-close" onclick="closeModal()" aria-label="Fermer la recette">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>
+    </button>
+    <div class="modal-img" id="modalImg" role="img" aria-label="Illustration de la recette"></div>
+    <div class="modal-body" id="modalBody"></div>
+  </div>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="js/main.js"></script>
+</body>
+</html>

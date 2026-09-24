@@ -1,0 +1,20 @@
+# Dependencies and local application
+backend/
+node_modules/
+account.html
+account.js
+
+# Private runtime data (keep only the public recipe catalogue)
+data/*
+!data/recipes.json
+
+# Secrets and generated deployment files
+.env
+.env.*
+dist/
+
+# Local-only documentation and metadata
+*.md
+!README.md
+.opencode/
+.DS_Store

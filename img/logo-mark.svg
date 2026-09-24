@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+  <!-- Livre de cuisine ouvert -->
+  <path d="M4.5 20V11c0-.6.5-1 1.1-1 .5 0 .95.3 1.15.75L12 14.5l5.25-3.75c.2-.45.65-.75 1.15-.75.6 0 1.1.4 1.1 1v9"/>
+  <path d="M12 14.5V20"/>
+  <path d="M7 15.2h2M7 17.2h1.6"/>
+  <path d="M15 15.2h2M15.3 17.2h1.6"/>
+  <!-- Appareil photo -->
+  <path d="M10 2.5h4l1-2h-6l1 2z"/>
+  <rect x="7" y="2.5" width="10" height="6" rx="1.2"/>
+  <circle cx="12" cy="5.5" r="1.75"/>
+</svg>

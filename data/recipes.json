@@ -1,0 +1,888 @@
+[
+  {
+    "id": "recipe-1",
+    "title": "Tartare de crevettes marinées, mangue et citron vert",
+    "desc": "Crevettes juste saisies, dés de mangue bien mûre, gingembre frais râpé, coriandre ciselée et une vinaigrette citron vert-huile de sésame. Coucou mon loulou.",
+    "cat": "entree",
+    "tags": [
+      "Entrée",
+      "Été",
+      "Sans gluten"
+    ],
+    "time": "20 min",
+    "persons": 4,
+    "price": 14,
+    "rating": "4.9",
+    "badge": "Coup de cœur",
+    "badgeClass": "",
+    "image": "img/tartare.jpg",
+    "ingredients": [
+      "400g de crevettes crues décortiquées",
+      "1 mangue bien mûre",
+      "2 citrons verts",
+      "1 cuil. à soupe d'huile de sésame",
+      "1 cuil. à café de gingembre frais râpé",
+      "½ bouquet de coriandre fraîche",
+      "1 échalote",
+      "Fleur de sel, poivre du moulin",
+      "1 pincée de piment d'Espelette",
+      "Graines de sésame toastées"
+    ],
+    "steps": [
+      "Saisir les crevettes 1 min de chaque côté dans une poêle bien chaude avec un filet d'huile d'olive. Laisser refroidir puis couper en dés.",
+      "Peler la mangue et la couper en petits dés réguliers. Ciseler finement l'échalote et la coriandre.",
+      "Préparer la vinaigrette : mélanger le jus des citrons verts, l'huile de sésame, le gingembre râpé, sel et poivre.",
+      "Dans un saladier, mélanger délicatement les crevettes, la mangue, l'échalote et la coriandre. Verser la vinaigrette.",
+      "Dresser dans des cercles de présentation. Parsemer de sésame toasté et d'une pincée de piment d'Espelette. Servir frais."
+    ]
+  },
+  {
+    "title": "Velouté glacé de petits pois à la menthe et feta",
+    "desc": "Un velouté froid d'une fraîcheur incomparable. Petits pois croquants, menthe du jardin, feta émiettée et un filet d'huile d'olive fruitée.",
+    "cat": "entree",
+    "tags": [
+      "Entrée",
+      "Végétarien",
+      "Rapide"
+    ],
+    "time": "15 min",
+    "persons": 4,
+    "price": 7,
+    "rating": "4.6",
+    "badge": "Rapide",
+    "badgeClass": "quick",
+    "image": "img/veloute.jpg",
+    "ingredients": [
+      "500g de petits pois surgelés",
+      "20 feuilles de menthe fraîche",
+      "150g de feta",
+      "1 gousse d'ail",
+      "1 oignon nouveau",
+      "50cl de bouillon de légumes",
+      "10cl de crème liquide entière",
+      "Huile d'olive",
+      "Sel, poivre blanc",
+      "Quelques gouttes de Tabasco (optionnel)"
+    ],
+    "steps": [
+      "Faire revenir l'oignon émincé et l'ail dans un filet d'huile d'olive 3 min sans coloration.",
+      "Ajouter les petits pois et le bouillon. Porter à ébullition puis cuire 8 min.",
+      "Hors du feu, ajouter la crème et les feuilles de menthe. Mixer finement jusqu'à obtenir un velouté lisse.",
+      "Assaisonner de sel, poivre blanc et Tabasco. Laisser refroidir puis placer au réfrigérateur 2h minimum.",
+      "Servir dans des bols ou verrines, émietter la feta par-dessus et ajouter un filet d'huile d'olive."
+    ],
+    "id": "recipe-2"
+  },
+  {
+    "title": "Carpaccio de betteraves rôties, chèvre frais et noix caramélisées",
+    "desc": "Betteraves confites au four, fines tranches fondantes, chèvre frais onctueux, noix croquantes au miel et vinaigrette balsamique.",
+    "cat": "entree",
+    "tags": [
+      "Entrée",
+      "Végétarien",
+      "Sans gluten"
+    ],
+    "time": "1h",
+    "persons": 4,
+    "price": 9,
+    "rating": "4.7",
+    "badge": "Végétarien",
+    "badgeClass": "veggie",
+    "image": "img/carpaccio.jpg",
+    "ingredients": [
+      "3 betteraves crues moyennes",
+      "200g de chèvre frais (type Petit Billy)",
+      "80g de cerneaux de noix",
+      "2 cuil. à soupe de miel",
+      "4 cuil. à soupe de vinaigre balsamique",
+      "6 cuil. à soupe d'huile d'olive",
+      "Fleur de sel, poivre",
+      "Quelques pousses de roquette",
+      "1 cuil. à café de thym frais"
+    ],
+    "steps": [
+      "Envelopper chaque betterave dans du papier aluminium avec un filet d'huile d'olive et du thym. Enfourner 1h à 180°C.",
+      "Pendant ce temps, faire chauffer le miel dans une poêle, y faire caraméliser les noix 3 min. Laisser refroidir sur du papier sulfurisé.",
+      "Laisser tiédir les betteraves, les peler (la peau se retire facilement). Trancher très finement à la mandoline.",
+      "Disposer les tranches de betterave en rosace sur les assiettes. Émietter le chèvre frais par-dessus.",
+      "Concasser les noix caramélisées et les parsemer. Arroser de vinaigrette (balsamique + huile d'olive). Décorer de roquette."
+    ],
+    "id": "recipe-3"
+  },
+  {
+    "title": "Risotto crémeux aux asperges vertes, parmesan et zeste de citron",
+    "desc": "Risotto minute où le riz arborio nage dans une crème de parmesan, relevé par des pointes d'asperges croquantes et un zeste de citron bio.",
+    "cat": "plat",
+    "tags": [
+      "Plat",
+      "Végétarien",
+      "Printemps"
+    ],
+    "time": "30 min",
+    "persons": 4,
+    "price": 9,
+    "rating": "4.8",
+    "badge": "Végétarien",
+    "badgeClass": "veggie",
+    "image": "img/risotto.jpg",
+    "ingredients": [
+      "320g de riz arborio",
+      "1 botte d'asperges vertes",
+      "1 oignon",
+      "1L de bouillon de légumes chaud",
+      "10cl de vin blanc sec",
+      "80g de parmesan râpé",
+      "40g de beurre",
+      "1 citron bio",
+      "2 cuil. à soupe de mascarpone",
+      "Huile d'olive, sel, poivre"
+    ],
+    "steps": [
+      "Couper les pointes d'asperges (4 cm) et les blanchir 2 min à l'eau bouillante salée. Réserver. Couper le reste des tiges en rondelles.",
+      "Dans une grande casserole, faire suer l'oignon émincé dans l'huile d'olive 5 min. Ajouter le riz et nacrer 2 min.",
+      "Verser le vin blanc, laisser absorber. Ajouter le bouillon louche par louche en remuant, pendant 16-18 min.",
+      "À mi-cuisson, incorporer les rondelles d'asperges. En fin de cuisson, ajouter le beurre, le parmesan et le mascarpone.",
+      "Hors du feu, zester le citron, mélanger. Dresser dans les assiettes, disposer les pointes d'asperges et un tour de poivre."
+    ],
+    "id": "recipe-4"
+  },
+  {
+    "title": "Tajine d'agneau aux abricots, amandes et épices douces",
+    "desc": "Agneau confit pendant 2h, abricots moelleux, amandes grillées, cannelle, cumin et miel. Un voyage au Maghreb dans votre assiette.",
+    "cat": "plat",
+    "tags": [
+      "Plat",
+      "Oriental",
+      "Convivial"
+    ],
+    "time": "2h15",
+    "persons": 6,
+    "price": 16,
+    "rating": "4.8",
+    "badge": "Convivial",
+    "badgeClass": "",
+    "image": "img/tajine.jpg",
+    "ingredients": [
+      "1,2 kg d'épaule d'agneau coupée en morceaux",
+      "2 oignons",
+      "3 gousses d'ail",
+      "200g d'abricots secs",
+      "100g d'amandes entières",
+      "2 cuil. à soupe de miel",
+      "1 cuil. à café de cannelle",
+      "1 cuil. à café de cumin en poudre",
+      "½ cuil. à café de gingembre",
+      "1 pincée de safran",
+      "50cl de bouillon de volaille",
+      "4 cuil. à soupe d'huile d'olive",
+      "1 bâton de cannelle",
+      "Coriandre fraîche",
+      "Sel, poivre"
+    ],
+    "steps": [
+      "Dans une cocotte, faire dorer les morceaux d'agneau dans l'huile d'olive par lots. Réserver.",
+      "Dans la même cocotte, faire revenir les oignons émincés et l'ail haché 5 min. Ajouter les épices en poudre, remuer 1 min.",
+      "Remettre la viande, verser le bouillon, ajouter le bâton de cannelle. Couvrir et laisser mijoter à feu doux 1h30.",
+      "Ajouter les abricots secs et le miel. Poursuivre la cuisson 30 min à découvert pour que la sauce réduise.",
+      "Faire griller les amandes à sec dans une poêle. Servir le tajine parsemé d'amandes et de coriandre ciselée."
+    ],
+    "id": "recipe-5"
+  },
+  {
+    "title": "Pavé de saumon laqué au miso, écrasé de patate douce au sésame",
+    "desc": "Saumon nacré laqué au miso blanc et mirin, servi sur un nuage de patate douce au beurre de sésame. Équilibré, raffiné, inratable.",
+    "cat": "plat",
+    "tags": [
+      "Plat",
+      "Japonais",
+      "Rapide"
+    ],
+    "time": "25 min",
+    "persons": 4,
+    "price": 17,
+    "rating": "4.9",
+    "badge": "Rapide",
+    "badgeClass": "quick",
+    "image": "img/saumon.jpg",
+    "ingredients": [
+      "4 pavés de saumon de 150g",
+      "3 cuil. à soupe de miso blanc",
+      "2 cuil. à soupe de mirin",
+      "1 cuil. à soupe de miel",
+      "800g de patates douces",
+      "30g de beurre",
+      "2 cuil. à soupe de graines de sésame",
+      "1 cuil. à soupe d'huile de sésame toasté",
+      "Ciboulette ciselée",
+      "Sel, poivre",
+      "Quelques quartiers de citron vert"
+    ],
+    "steps": [
+      "Mélanger le miso, le mirin et le miel. Badigeonner les pavés de saumon et laisser mariner 15 min au frais.",
+      "Cuire les patates douces pelées et coupées en cubes à la vapeur 15 min. Écraser avec le beurre et l'huile de sésame.",
+      "Faire griller les graines de sésame à sec. Les incorporer à l'écrasé de patate douce. Saler, poivrer.",
+      "Dans une poêle antiadhésive chaude, saisir les pavés de saumon côté peau 3 min, retourner 1 min. Laquer avec le reste de marinade.",
+      "Dresser l'écrasé de patate douce, poser le saumon, parsemer de ciboulette. Servir avec un quartier de citron vert."
+    ],
+    "id": "recipe-6"
+  },
+  {
+    "title": "Pâtes fraîches aux gambas flambées, tomates cerises confites et basilic",
+    "desc": "Tagliatelles al dente, gambas snackées au pastis, tomates cerises rôties lentement et basilic frais : l'Italie en 25 minutes chrono.",
+    "cat": "plat",
+    "tags": [
+      "Plat",
+      "Italien",
+      "Rapide"
+    ],
+    "time": "25 min",
+    "persons": 4,
+    "price": 18,
+    "rating": "4.7",
+    "badge": "Rapide",
+    "badgeClass": "quick",
+    "image": "img/pates.jpg",
+    "ingredients": [
+      "400g de tagliatelles fraîches",
+      "16 gambas crues",
+      "250g de tomates cerises",
+      "3 gousses d'ail",
+      "5cl de pastis",
+      "10cl de crème liquide",
+      "1 bouquet de basilic frais",
+      "4 cuil. à soupe d'huile d'olive",
+      "Parmesan râpé",
+      "Sel, poivre, piment d'Espelette"
+    ],
+    "steps": [
+      "Préchauffer le four à 150°C. Couper les tomates cerises en deux, les disposer sur une plaque, filet d'huile d'olive, sel, poivre. Enfourner 20 min.",
+      "Décortiquer les gambas en gardant la queue. Les faire revenir 1 min de chaque côté dans l'huile d'olive avec l'ail émincé.",
+      "Flamber au pastis (hors du feu par sécurité). Ajouter la crème, laisser réduire 2 min.",
+      "Cuire les pâtes al dente dans une grande casserole d'eau salée. Égoutter en gardant une louche d'eau de cuisson.",
+      "Mélanger les pâtes avec la sauce aux gambas et les tomates confites. Ajouter le basilic ciselé et une touche d'eau de cuisson. Servir avec parmesan."
+    ],
+    "id": "recipe-7"
+  },
+  {
+    "title": "Fondant au chocolat noir, cœur caramel beurre salé",
+    "desc": "Ganache intense au chocolat noir 70% cache un cœur coulant au caramel beurre salé maison. Contraste chaud-fondant irrésistible.",
+    "cat": "dessert",
+    "tags": [
+      "Dessert",
+      "Gourmand",
+      "Chocolat"
+    ],
+    "time": "35 min",
+    "persons": 6,
+    "price": 8,
+    "rating": "4.9",
+    "badge": "Gourmand",
+    "badgeClass": "gourmet",
+    "image": "img/fondant.jpg",
+    "ingredients": [
+      "200g de chocolat noir 70%",
+      "150g de beurre demi-sel",
+      "120g de sucre",
+      "4 œufs",
+      "60g de farine",
+      "Pour le caramel : 100g de sucre",
+      "20g de beurre demi-sel",
+      "10cl de crème liquide",
+      "Fleur de sel"
+    ],
+    "steps": [
+      "Préparer le caramel beurre salé : faire fondre le sucre à sec jusqu'à obtenir un caramel ambré. Hors du feu, ajouter le beurre puis la crème. Remettre sur feu doux 2 min. Ajouter la fleur de sel. Laisser refroidir.",
+      "Préchauffer le four à 200°C. Beurrer 6 ramequins.",
+      "Faire fondre le chocolat et le beurre au bain-marie. Hors du feu, incorporer le sucre puis les œufs un à un. Ajouter la farine.",
+      "Remplir les ramequins à moitié, déposer 1 cuil. à café de caramel au centre, recouvrir du reste de pâte.",
+      "Enfourner 10-12 min (le dessus doit être cuit, le centre tremblotant). Démouler délicatement et servir immédiatement."
+    ],
+    "id": "recipe-8"
+  },
+  {
+    "title": "Panna cotta à la vanille de Madagascar, coulis de fruits rouges",
+    "desc": "Panna cotta ultra-soyeuse infusée à la gousse de vanille, nappée d'un coulis vibrant de framboises et groseilles. La douceur à l'italienne.",
+    "cat": "dessert",
+    "tags": [
+      "Dessert",
+      "Italien",
+      "Sans gluten"
+    ],
+    "time": "4h",
+    "persons": 6,
+    "price": 10,
+    "rating": "4.8",
+    "badge": "Raffiné",
+    "badgeClass": "",
+    "image": "img/panna-cotta.jpg",
+    "ingredients": [
+      "50cl de crème liquide entière",
+      "25cl de lait entier",
+      "80g de sucre",
+      "1 gousse de vanille de Madagascar",
+      "3 feuilles de gélatine (6g)",
+      "Pour le coulis : 200g de framboises",
+      "100g de groseilles",
+      "50g de sucre",
+      "1 cuil. à soupe de jus de citron"
+    ],
+    "steps": [
+      "Faire ramollir la gélatine dans l'eau froide 10 min. Gratter la gousse de vanille.",
+      "Dans une casserole, chauffer crème, lait, sucre, graines et gousse de vanille. Frémir 5 min sans bouillir.",
+      "Hors du feu, retirer la gousse, incorporer la gélatine essorée. Mélanger jusqu'à dissolution complète.",
+      "Verser dans des verrines. Laisser refroidir puis réfrigérer 4h minimum.",
+      "Mixer les fruits rouges avec le sucre et le citron. Passer au tamis. Napper les panna cotta au moment de servir."
+    ],
+    "id": "recipe-9"
+  },
+  {
+    "title": "Tiramisu fraise-basilic, mascarpone citronné",
+    "desc": "Variation estivale du classique italien : biscuits cuillère imbibés de sirop fraise-basilic, mascarpone au citron vert et fraises fraîches.",
+    "cat": "dessert",
+    "tags": [
+      "Dessert",
+      "Été",
+      "Italien"
+    ],
+    "time": "25 min",
+    "persons": 8,
+    "price": 14,
+    "rating": "4.7",
+    "badge": "Été",
+    "badgeClass": "",
+    "image": "img/tiramisu.jpg",
+    "ingredients": [
+      "500g de fraises",
+      "250g de mascarpone",
+      "3 œufs",
+      "80g de sucre",
+      "24 biscuits cuillère",
+      "1 citron vert",
+      "10 feuilles de basilic",
+      "10cl d'eau",
+      "2 cuil. à soupe de sucre pour le sirop"
+    ],
+    "steps": [
+      "Préparer le sirop : faire chauffer l'eau avec le sucre et le basilic ciselé. Laisser infuser 10 min puis filtrer.",
+      "Mixer 200g de fraises avec le sirop refroidi. Tremper rapidement les biscuits dans ce mélange.",
+      "Séparer les blancs des jaunes. Battre les jaunes avec le sucre jusqu'à blanchiment. Ajouter le mascarpone et le zeste de citron vert.",
+      "Monter les blancs en neige et les incorporer délicatement à la crème mascarpone.",
+      "Alterner couches de biscuits imbibés, crème et fraises coupées en tranches. Terminer par des fraises fraîches et quelques feuilles de basilic."
+    ],
+    "id": "recipe-10"
+  },
+  {
+    "title": "Limonade pastèque-basilic, gingembre frais",
+    "desc": "Limonade maison vibrante : pastèque juteuse mixée, basilic thaï, gingembre frais râpé, eau pétillante. La boisson de l'été.",
+    "cat": "boisson",
+    "tags": [
+      "Boisson",
+      "Été",
+      "Rapide"
+    ],
+    "time": "10 min",
+    "persons": 6,
+    "price": 6,
+    "rating": "4.9",
+    "badge": "Rapide",
+    "badgeClass": "quick",
+    "image": "img/limonade.jpg",
+    "ingredients": [
+      "½ pastèque bien mûre (environ 1 kg de chair)",
+      "1 citron vert",
+      "10 feuilles de basilic",
+      "2 cm de gingembre frais",
+      "50cl d'eau pétillante bien fraîche",
+      "2 cuil. à soupe de sirop d'agave (optionnel)",
+      "Glaçons"
+    ],
+    "steps": [
+      "Épépiner la pastèque et couper la chair en cubes. Peler et râper le gingembre.",
+      "Mixer la pastèque, le basilic, le gingembre et le jus du citron vert jusqu'à obtenir un jus lisse.",
+      "Passer au tamis fin pour retirer la pulpe si vous préférez une texture plus fluide.",
+      "Ajouter le sirop d'agave si la pastèque n'est pas assez sucrée. Mélanger.",
+      "Au moment de servir, compléter avec l'eau pétillante et des glaçons. Décorer d'une tranche de citron vert et d'une feuille de basilic."
+    ],
+    "id": "recipe-11"
+  },
+  {
+    "title": "Smoothie bowl açai, granola maison et fruits frais",
+    "desc": "Bol énergisant à la purée d'açai, banane, lait d'amande, surmonté d'un granola croustillant maison, kiwi, myrtilles et graines de chia.",
+    "cat": "boisson",
+    "tags": [
+      "Boisson",
+      "Petit-déjeuner",
+      "Végétarien"
+    ],
+    "time": "15 min",
+    "persons": 2,
+    "price": 9,
+    "rating": "4.8",
+    "badge": "Healthy",
+    "badgeClass": "veggie",
+    "image": "img/smoothie-bowl.jpg",
+    "ingredients": [
+      "2 sachets de purée d'açai surgelée",
+      "2 bananes congelées",
+      "15cl de lait d'amande",
+      "1 cuil. à soupe de miel",
+      "Toppings : 1 kiwi, 1 poignée de myrtilles, ½ mangue",
+      "2 cuil. à soupe de granola",
+      "1 cuil. à café de graines de chia",
+      "Noix de coco râpée"
+    ],
+    "steps": [
+      "Mixer la purée d'açai, les bananes congelées, le lait d'amande et le miel jusqu'à obtenir une texture épaisse et lisse.",
+      "Verser dans deux bols. La texture doit être assez épaisse pour que les toppings ne coulent pas.",
+      "Couper le kiwi en rondelles, la mangue en dés. Disposer harmonieusement sur le smoothie bowl.",
+      "Parsemer de granola, graines de chia, myrtilles et noix de coco râpée.",
+      "Servir immédiatement avant que le smoothie ne ramollisse. Déguster à la cuillère !"
+    ],
+    "id": "recipe-12"
+  },
+  {
+    "title": "Tartines grillées avocat-feta, œuf poché et zaatar",
+    "desc": "Pain au levain toasté, avocat écrasé au citron, feta émiettée, œuf poché parfait et zaatar parfumé. Brunch de champion en 15 minutes.",
+    "cat": "plat",
+    "tags": [
+      "Plat",
+      "Brunch",
+      "Végétarien",
+      "Rapide"
+    ],
+    "time": "15 min",
+    "persons": 2,
+    "price": 7,
+    "rating": "4.8",
+    "badge": "Rapide",
+    "badgeClass": "quick",
+    "image": "img/tartines.jpg",
+    "ingredients": [
+      "2 grandes tranches de pain au levain",
+      "2 avocats bien mûrs",
+      "2 œufs très frais",
+      "80g de feta",
+      "1 citron",
+      "2 cuil. à café de zaatar",
+      "Huile d'olive",
+      "Piment d'Alep ou flocons de piment",
+      "Fleur de sel",
+      "1 cuil. à soupe de vinaigre blanc (pour pocher les œufs)"
+    ],
+    "steps": [
+      "Porter une casserole d'eau à frémissement. Ajouter le vinaigre. Casser l'œuf dans un ramequin. Créer un tourbillon et y glisser l'œuf. Pocher 3 min. Répéter.",
+      "Faire griller les tranches de pain au levain au grille-pain ou à la poêle.",
+      "Écraser l'avocat à la fourchette avec le jus du demi-citron, un filet d'huile d'olive et la fleur de sel.",
+      "Tartiner généreusement l'avocat sur les toasts. Émietter la feta par-dessus. Saupoudrer de zaatar.",
+      "Déposer l'œuf poché sur chaque tartine. Ajouter une pincée de piment d'Alep et un tour de moulin à poivre. Servir aussitôt."
+    ],
+    "id": "recipe-13"
+  },
+  {
+    "id": "recipe-6b6bb282",
+    "title": "Le sandwich sans pain le repas parfait de l'été !",
+    "desc": "Brouillon autonome créé depuis la vidéo de Easy Recipes. Vérifiez les quantités et les étapes avant publication.",
+    "cat": "dessert",
+    "tags": [
+      "Vidéo",
+      "À vérifier"
+    ],
+    "time": "3 min",
+    "persons": 4,
+    "price": 8,
+    "rating": "4.5",
+    "badge": "À vérifier",
+    "badgeClass": "",
+    "image": "https://img.youtube.com/vi/Qt_WIDjNfmA/hqdefault.jpg",
+    "ingredients": [
+      "Envie d'un repas original, croustillant et ultra gourmand ? 😍 Découvrez ce délicieux sandwich sans pain, réalisé avec des pommes de terre dorées et du fromage fondant. Une recette simple, rapide et personnalisable selon vos envies !",
+      "Sel et poivre",
+      "Pour la garniture (à personnaliser selon vos envies) :"
+    ],
+    "steps": [
+      "Regarder la vidéo et préparer les ingrédients.",
+      "Suivre les gestes et les temps de cuisson indiqués.",
+      "Goûter, rectifier l’assaisonnement et servir."
+    ],
+    "videoUrl": "https://www.youtube.com/watch?v=Qt_WIDjNfmA",
+    "sourceUrl": "https://www.youtube.com/watch?v=Qt_WIDjNfmA",
+    "sourcePlatform": "youtube",
+    "importedAt": "2026-07-10T12:42:08.357Z"
+  },
+  {
+    "id": "recipe-b2bce604",
+    "title": "Recette express et plein de saveurs",
+    "desc": "Brouillon extrait de la description vidéo de Easy Recipes. Vérifiez les quantités et les étapes avant publication.",
+    "cat": "plat",
+    "tags": [
+      "Vidéo",
+      "À vérifier"
+    ],
+    "time": "1 min",
+    "persons": 4,
+    "price": 10,
+    "rating": "4.5",
+    "badge": "À vérifier",
+    "badgeClass": "",
+    "image": "https://i.ytimg.com/vi/JPtYf4xbThA/maxresdefault.jpg",
+    "ingredients": [
+      "250 g de calamars nettoyé et couper en rondelles",
+      "250 g de crevettes décortiquées et déveinées",
+      "1 filet d’huile d’olive",
+      "2 gousses d’ail hachées",
+      "Quelques tomates cerises coupées en deux",
+      "Environ 150 ml fumet de poisson (ou ½ cube de bouillon de poisson dilué dans de l’eau)",
+      "2 càs de sauce tomate",
+      "1 càs de persil frais ciselé",
+      "Sel",
+      "poivre",
+      "purée de pomme de terre…"
+    ],
+    "steps": [
+      "Dans une poêle, faites revenir l’ail dans un filet d’huile d’olive.",
+      "Ajoutez les tomates cerises, faire revenir 1 mint, puis versez un peu de fumet.",
+      "Incorporez la sauce tomate, les épices et le persil, laissez mijoter quelques instants.",
+      "Ajoutez les calamars et faites-les revenir 2 minutes.",
+      "Versez le reste du fumet, ajoutez les crevettes et laissez mijoter environ 10 minutes à feu moyen.",
+      "Terminez en ajoutant les olives et un peu de persil frais avant de servir."
+    ],
+    "videoUrl": "https://www.youtube.com/shorts/JPtYf4xbThA",
+    "sourceUrl": "https://www.youtube.com/shorts/JPtYf4xbThA",
+    "sourcePlatform": "youtube",
+    "importedAt": "2026-07-10T13:35:47.976Z"
+  },
+  {
+    "id": "recipe-9faa9dc8",
+    "title": "Le sandwich d’été parfait ! Délicieux & prêt en quelques minutes",
+    "desc": "Brouillon extrait des sous-titres ou de la transcription de Easy Recipes. Vérifiez les quantités et les étapes avant publication.",
+    "cat": "dessert",
+    "tags": [
+      "Vidéo",
+      "À vérifier"
+    ],
+    "time": "4 min",
+    "persons": 4,
+    "price": 8,
+    "rating": "4.5",
+    "badge": "À vérifier",
+    "badgeClass": "",
+    "image": "https://img.youtube.com/vi/v7uCOLxf7-s/hqdefault.jpg",
+    "ingredients": [
+      "3 œufs durs",
+      "2 petites boites de thon",
+      "1/2 oignon rouge",
+      "2 càs de fromage à tartiner",
+      "sel",
+      "poivre",
+      "1 filet d'huile d'olive",
+      "fromage à tartiner",
+      "oignons frits"
+    ],
+    "steps": [
+      "Regarder la vidéo et préparer les ingrédients.",
+      "Suivre les gestes et les temps de cuisson indiqués.",
+      "Goûter, rectifier l’assaisonnement et servir."
+    ],
+    "videoUrl": "https://www.youtube.com/watch?v=v7uCOLxf7-s",
+    "sourceUrl": "https://www.youtube.com/watch?v=v7uCOLxf7-s",
+    "sourcePlatform": "youtube",
+    "importedAt": "2026-07-10T14:02:00.404Z"
+  },
+  {
+    "id": "recipe-8dafc52e",
+    "title": "Gâteau ☕️ sans cuisson !",
+    "desc": "Brouillon autonome créé depuis la description de Easy Recipes. Vérifiez les quantités et les étapes avant publication.",
+    "cat": "dessert",
+    "tags": [
+      "Vidéo",
+      "À vérifier"
+    ],
+    "time": "1 min",
+    "persons": 4,
+    "price": 4,
+    "rating": "4.5",
+    "badge": "À vérifier",
+    "badgeClass": "",
+    "image": "https://img.youtube.com/vi/9SmW7oiGfCo/hqdefault.jpg",
+    "ingredients": [
+      "Quantités à relever dans la vidéo source"
+    ],
+    "steps": [
+      "Regarder la vidéo et préparer les ingrédients.",
+      "Suivre les gestes et les temps de cuisson indiqués.",
+      "Goûter, rectifier l’assaisonnement et servir."
+    ],
+    "videoUrl": "https://www.youtube.com/shorts/9SmW7oiGfCo",
+    "sourceUrl": "https://www.youtube.com/shorts/9SmW7oiGfCo",
+    "sourcePlatform": "youtube",
+    "importedAt": "2026-07-10T14:03:34.758Z"
+  },
+  {
+    "id": "recipe-ce9ed488",
+    "title": "Guacamole",
+    "desc": "Dans un saladier, versez la chair d’avocat et tous les ingrédients. Prenez une fourchette et écrasez pour fusionner les textures et les arômes.…",
+    "cat": "plat",
+    "tags": [
+      "Avocat",
+      "Coriandre fraîche",
+      "Citron vert",
+      "Guacamoles",
+      "Mexique",
+      "Oignon rouge",
+      "Entrée",
+      "Sans viande"
+    ],
+    "time": "10 min",
+    "persons": 4,
+    "price": 8,
+    "rating": "0",
+    "badge": "Rapide",
+    "badgeClass": "quick",
+    "image": "img/guacamole.jpg",
+    "imageCard": "img/guacamole-card.jpg",
+    "imageThumb": "img/guacamole-thumb.jpg",
+    "ingredients": [
+      "2 avocats",
+      "1 oignon rouge haché",
+      "1 tomate hachée",
+      "10 g coriandre ciselée",
+      "1 citron vert pressé",
+      "sel, poivre"
+    ],
+    "steps": [
+      "Dans un saladier, versez la chair d’avocat et tous les ingrédients.",
+      "Prenez une fourchette et écrasez pour fusionner les textures et les arômes.",
+      "Assaisonnez selon votre goût et réservez le guacamole jusqu’au moment de servir."
+    ],
+    "sourceUrl": "https://www.cuisine-libre.org/guacamole-declic",
+    "sourcePlatform": "rss",
+    "importedAt": "2026-07-10T22:41:46.579Z"
+  },
+  {
+    "id": "recipe-4d565850",
+    "title": "Pâtes fraîches en persillade",
+    "desc": "Recette de pâtes fraîches italiennes en sauce ail-persil-parmesan.",
+    "cat": "plat",
+    "tags": [
+      "Ail",
+      "Plats de pâtes",
+      "Persil plat",
+      "Pâtes fraîches",
+      "Plat",
+      "Végétarien",
+      "Printemps",
+      "Bouilli"
+    ],
+    "time": "17 min",
+    "persons": 4,
+    "price": 6,
+    "rating": "0",
+    "badge": "Rapide",
+    "badgeClass": "quick",
+    "image": "img/pates-fraiches-en-persillade.jpg",
+    "imageCard": "img/pates-fraiches-en-persillade-card.jpg",
+    "imageThumb": "img/pates-fraiches-en-persillade-thumb.jpg",
+    "ingredients": [
+      "500 g de pâtes fraîches italiennes",
+      "4 gousses d’ail",
+      "1 bouquet de persil plat",
+      "60 g de parmesan",
+      "6 c. à s. d’huile d’olive"
+    ],
+    "steps": [
+      "Faites cuire les pâtes fraîches 2–3 min dans une eau bouillante salée.",
+      "Hachez l’ail et le persil. Faites revenir l’ail dans l’huile sans le brûler (feu doux !).",
+      "Ajoutez le persil hors du feu. Incorporez les pâtes et un peu d’eau de cuisson .",
+      "Finissez avec le parmesan."
+    ],
+    "sourceUrl": "https://www.cuisine-libre.org/pates-fraiches-en-persillade",
+    "sourcePlatform": "rss",
+    "importedAt": "2026-07-10T22:45:49.912Z"
+  },
+  {
+    "id": "recipe-e7858f8f",
+    "title": "Truite épinard avocat",
+    "desc": "Cuire le saumon Chauffer l’huile d’olive dans une poêle. Déposer le pavé de truite côté peau, cuire à feu moyen 4 à 5 min. Retourner et cuire encore 2 à…",
+    "cat": "plat",
+    "tags": [
+      "Avocat",
+      "Steaks",
+      "Truite",
+      "Épinard en branche",
+      "Plat",
+      "Sans viande",
+      "Sans œuf",
+      "Sans gluten"
+    ],
+    "time": "30 min",
+    "persons": 1,
+    "price": 9,
+    "rating": "0",
+    "badge": "Rapide",
+    "badgeClass": "quick",
+    "image": "img/truite-epinard-avocat.jpg",
+    "imageCard": "img/truite-epinard-avocat-card.jpg",
+    "imageThumb": "img/truite-epinard-avocat-thumb.jpg",
+    "ingredients": [
+      "200 g de truite fraîche",
+      "150 g d’épinards frais",
+      "1/2 avocat (env. 75 g)",
+      "10 g de beurre",
+      "1 c. à soupe de jus de citron",
+      "1 c. à soupe d’huile d’olive",
+      "Sel, poivre, ail en poudre, aneth"
+    ],
+    "steps": [
+      "Chauffer l’huile d’olive dans une poêle.",
+      "Déposer le pavé de truite côté peau, cuire à feu moyen 4 à 5 min.",
+      "Retourner et cuire encore 2 à 3 min.",
+      "Assaisonner avec sel, poivre, ail en poudre et aneth.",
+      "Dans une autre poêle, faire fondre le beurre.",
+      "Ajouter les épinards, les faire tomber 2 à 3 min jusqu’à ce qu’ils soient tendres.",
+      "Dans une petite casserole, faire chauffer le jus de citron avec une noisette de beurre.",
+      "Disposer le saumon sur l’assiette avec les épinards sautés.",
+      "Ajouter l’avocat en tranches pour un bon apport en bons lipides.",
+      "Napper le saumon avec la sauce citronnée."
+    ],
+    "sourceUrl": "https://www.cuisine-libre.org/truite-epinard-avocat",
+    "sourcePlatform": "rss",
+    "importedAt": "2026-07-11T05:39:22.370Z"
+  },
+  {
+    "id": "recipe-32595b9e",
+    "title": "Tortillas à la farine de maïs",
+    "desc": "Tiédir l’eau. Ajouter l’eau et la farine dans un saladier puis malaxer 5 minutes. Une fois le mélange bien homogène, former des boules de 30 grammes.…",
+    "cat": "plat",
+    "tags": [
+      "Farine de maïs",
+      "Banniques",
+      "Mexique",
+      "Végétalien (vegan)",
+      "Sans viande",
+      "Végétarien",
+      "Sans œuf",
+      "Sans lactose"
+    ],
+    "time": "1 h",
+    "persons": 10,
+    "price": 13,
+    "rating": "0",
+    "badge": "Rapide",
+    "badgeClass": "quick",
+    "image": "img/tortillas-a-la-farine-de-mais.jpg",
+    "imageCard": "img/tortillas-a-la-farine-de-mais-card.jpg",
+    "imageThumb": "img/tortillas-a-la-farine-de-mais-thumb.jpg",
+    "ingredients": [
+      "150 g de farine de maïs",
+      "eau tiéde",
+      "sel"
+    ],
+    "steps": [
+      "Tiédir l’eau.",
+      "Ajouter l’eau et la farine dans un saladier puis malaxer 5 minutes.",
+      "Une fois le mélange bien homogène, former des boules de 30 grammes.",
+      "Presser les tortillas.",
+      "Cuire à la poêle 2 minutes de chaque côté."
+    ],
+    "sourceUrl": "https://www.cuisine-libre.org/tortillas-a-la-farine-de-mais",
+    "sourcePlatform": "rss",
+    "importedAt": "2026-07-11T05:39:22.938Z"
+  },
+  {
+    "id": "recipe-6040aad7",
+    "title": "Maffé de patate douce aux épinards",
+    "desc": "Ragoût d'épinard et patate douce au beurre de cacahuète (sans gluten ni lactose, végan) d'Afrique de l'Ouest : très simple à faire pour un goût exquis !",
+    "cat": "plat",
+    "tags": [
+      "Patate douce",
+      "Épinard",
+      "Beurre de cacahuète",
+      "Soudan",
+      "Niger",
+      "Mafés",
+      "Végétalien (vegan)",
+      "Sans gluten"
+    ],
+    "time": "55 min",
+    "persons": 6,
+    "price": 15,
+    "rating": "0",
+    "badge": "Végétarien",
+    "badgeClass": "veggie",
+    "image": "img/maffe-de-patate-douce-aux-epinards.jpg",
+    "imageCard": "img/maffe-de-patate-douce-aux-epinards-card.jpg",
+    "imageThumb": "img/maffe-de-patate-douce-aux-epinards-thumb.jpg",
+    "ingredients": [
+      "1 oignon moyen, haché",
+      "3 gousses d’ail, émincées",
+      "2 c. à soupe de gingembre frais râpé",
+      "2 c. à soupe d’huile d’olive",
+      "6 tasses d’eau",
+      "½ c. à café de piment rouge écrasé",
+      "½ c. à café de sel",
+      "½ c. à café de poivre noir",
+      "700 g de patate douce, coupée en morceaux",
+      "2 tomates moyennes, hachées",
+      "3 tasses (500 g) de chou frisé ou d’épinards hachés (surgelés)",
+      "1 c. à café rase de flocons de piment ou pas",
+      "1 louche remplie de beurre d’arachides croquant"
+    ],
+    "steps": [
+      "Dans une grande casserole, faire revenir l’oignon, l’ail et le gingembre dans l’huile jusqu’à ce qu’ils soient tendres.",
+      "Verser 5 tasses d’eau et assaisonner de piment, sel et poivre. Ajouter les patates douces et porter à ébullition. Réduire le feu à moyen-doux et laisser mijoter pendant 15 minutes.",
+      "Délayer une louche de beurre de cacahuètes dans le bouillon à l’aide d’une cuillère. Verser la dernière tasse d’eau, les tomates, les légumes verts et le beurre d’arachide. Cuire à feu moyen pendant 20 minutes en remuant de temps en temps pour que le beurre d’arachides ne colle pas au fond."
+    ],
+    "sourceUrl": "https://www.cuisine-libre.org/ragout-vegan-epinard-patate-douce-arachide",
+    "sourcePlatform": "rss",
+    "importedAt": "2026-07-11T05:39:23.497Z"
+  },
+  {
+    "id": "recipe-d02e3e47",
+    "title": "Boules de coco",
+    "desc": "Battre le beurre et les deux sucres jusqu’à obtenir un mélange crémeux. Ajouter l’œuf, la farine, la fécule, la levure chimique et le sel. Former des…",
+    "cat": "boisson",
+    "tags": [
+      "Beurre",
+      "Farines",
+      "Maghreb",
+      "Poudre de coco",
+      "Douceur",
+      "Végétarien",
+      "Four",
+      "Sans viande"
+    ],
+    "time": "20 min",
+    "persons": 4,
+    "price": 9,
+    "rating": "5",
+    "badge": "Rapide",
+    "badgeClass": "quick",
+    "image": "img/boules-de-coco.jpg",
+    "imageCard": "img/boules-de-coco-card.jpg",
+    "imageThumb": "img/boules-de-coco-thumb.jpg",
+    "ingredients": [
+      "125 g de beurre mou (ou margarine)",
+      "60 g de sucre",
+      "5 g de sucre vanillé",
+      "1 œuf",
+      "200 g de farine T45",
+      "50 g de fécule de maïs",
+      "5 g de levure chimique",
+      "1 pincée de sel",
+      "confiture d’abricot",
+      "noix de coco râpée (achetée en sachet)"
+    ],
+    "steps": [
+      "Battre le beurre et les deux sucres jusqu’à obtenir un mélange crémeux.",
+      "Ajouter l’œuf, la farine, la fécule, la levure chimique et le sel.",
+      "Former des boules de 11 grammes et placez-les au frais pendant 10 minutes le temps de préchauffer le four.",
+      "Enfournez durant 10 minutes à 180°C. Les biscuits doivent rester blanc et être légèrement dorés en dessous . Laissez les refroidir.",
+      "Pendant ce temps, chauffez la confiture dans une casserole &mdash; il faut qu’elle soit liquide &mdash; à feu doux.",
+      "Verser la noix de coco râpée dans un récipient.",
+      "Il ne resta plus qu’à passer vos boules (refroidies) dans la confiture puis dans la noix de coco."
+    ],
+    "sourceUrl": "https://www.cuisine-libre.org/boules-de-coco",
+    "sourcePlatform": "rss",
+    "importedAt": "2026-07-11T17:27:29.998Z"
+  }
+]
