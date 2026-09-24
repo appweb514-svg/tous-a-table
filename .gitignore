@@ -16,5 +16,8 @@ dist/
 # Local-only documentation and metadata
 *.md
 !README.md
+!docs/
+!docs/**/*.md
+.test-tmp-*/
 .opencode/
 .DS_Store

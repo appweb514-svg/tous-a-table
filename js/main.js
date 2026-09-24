@@ -103,6 +103,19 @@ const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)
 const hasFinePointer = window.matchMedia('(pointer: fine)').matches;
 const categoryLabels = { entree: 'Entrée', plat: 'Plat', dessert: 'Dessert', boisson: 'Boisson' };
 
+function normalizeFilterToken(value) {
+  return String(value || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
+}
+
+function getRecipeCategoryTokens(recipe) {
+  const tokens = new Set([recipe.cat]);
+  const tags = (recipe.tags || []).map(normalizeFilterToken);
+  if (tags.some(tag => tag.includes('vegetalien') || tag.includes('vegetarien'))) tokens.add('vegetarien');
+  if (tags.some(tag => tag.includes('rapide'))) tokens.add('rapide');
+  if (tags.some(tag => tag.includes('gourmand'))) tokens.add('gourmand');
+  return [...tokens].filter(Boolean).join(' ');
+}
+
 /* ═══════════════════════ HELPERS ═══════════════════════ */
 function getYoutubeId(url) {
   if (!url) return null;
@@ -113,7 +126,10 @@ function getYoutubeId(url) {
 function getRecipeImageSrc(r) {
   const ytId = getYoutubeId(r.videoUrl || r.sourceUrl);
   if (ytId) return `https://img.youtube.com/vi/${ytId}/hqdefault.jpg`;
-  return r.imageCard || r.image || 'img/hero.jpg';
+  const source = r.imageCard || r.image || '';
+  const remote = getSafeHttpUrl(source);
+  if (remote) return remote.href;
+  return source.startsWith('img/') || source.startsWith('data:image/') ? source : 'img/hero.jpg';
 }
 
 function formatPrice(value) {
@@ -121,14 +137,40 @@ function formatPrice(value) {
   return price > 0 ? `≈ ${new Intl.NumberFormat('fr-FR', { style: 'currency', currency: 'EUR', maximumFractionDigits: 0 }).format(price)}` : 'Prix à estimer';
 }
 
-function getRecipeImageHTML(r, className, alt = '') {
-  return `<img class="${className}" src="${getRecipeImageSrc(r)}" alt="${alt || r.title}" loading="lazy" decoding="async">`;
-}
-
 function syncFeaturedRecipes() {
-  document.querySelectorAll('.featured-card[data-recipe-id]').forEach(card => {
-    const recipe = recipes.find(item => item.id === card.dataset.recipeId);
-    if (!recipe) return;
+  const cards = [...document.querySelectorAll('.featured-card[data-recipe-id]')];
+  const explicitlyFeatured = recipes.filter(recipe => recipe.featured === true);
+  const featuredRecipes = explicitlyFeatured.length ? [...explicitlyFeatured] : [];
+
+  if (explicitlyFeatured.length) {
+    for (const recipe of recipes) {
+      if (featuredRecipes.length >= cards.length) break;
+      if (!featuredRecipes.some(item => item.id === recipe.id)) featuredRecipes.push(recipe);
+    }
+  } else {
+    cards.forEach(card => {
+      const pinnedRecipe = recipes.find(recipe => recipe.id === card.dataset.recipeId);
+      if (pinnedRecipe && !featuredRecipes.some(item => item.id === pinnedRecipe.id)) featuredRecipes.push(pinnedRecipe);
+    });
+    for (const recipe of recipes) {
+      if (featuredRecipes.length >= cards.length) break;
+      if (!featuredRecipes.some(item => item.id === recipe.id)) featuredRecipes.push(recipe);
+    }
+  }
+
+  cards.forEach((card, index) => {
+    const recipe = featuredRecipes[index];
+    if (!recipe) {
+      card.hidden = true;
+      return;
+    }
+    card.hidden = false;
+    card.dataset.recipeId = recipe.id;
+    card.dataset.cats = getRecipeCategoryTokens(recipe);
+    if (card.dataset.featuredBound !== 'true') {
+      card.addEventListener('click', () => openRecipeById(card.dataset.recipeId));
+      card.dataset.featuredBound = 'true';
+    }
     const image = card.querySelector('.featured-img');
     if (image) {
       image.src = getRecipeImageSrc(recipe);
@@ -162,28 +204,28 @@ function syncFeaturedRecipes() {
 }
 
 function getCardHTML(r, i) {
-  return `<article class="recipe-card reveal tilt-card" data-cats="${r.cat}${r.tags.some(t => t === 'Végétarien') ? ' vegetarien' : ''}${r.tags.some(t => t === 'Rapide') ? ' rapide' : ''}${r.tags.some(t => t === 'Gourmand') ? ' gourmand' : ''}" onclick="openRecipe(${i})" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openRecipe(${i})}" role="button" tabindex="0" aria-label="Voir la recette : ${r.title}" style="transition-delay:${i * 0.04}s">
+  return `<article class="recipe-card reveal tilt-card" data-cats="${escapeHtml(getRecipeCategoryTokens(r))}" onclick="openRecipe(${i})" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openRecipe(${i})}" role="button" tabindex="0" aria-label="Voir la recette : ${escapeHtml(r.title)}" style="transition-delay:${i * 0.04}s">
     <div class="recipe-card-shine" aria-hidden="true"></div>
     <div class="recipe-img-wrap">
-      <img class="recipe-img" src="${getRecipeImageSrc(r)}" alt="" loading="lazy" decoding="async">
-      ${r.badge ? `<span class="recipe-badge ${r.badgeClass}">${r.badge}</span>` : ''}
+      <img class="recipe-img" src="${escapeHtml(getRecipeImageSrc(r))}" alt="" loading="lazy" decoding="async">
+      ${r.badge ? `<span class="recipe-badge ${escapeHtml(r.badgeClass || '')}">${escapeHtml(r.badge)}</span>` : ''}
       <span class="recipe-time">
         <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
-        ${r.time}
+        ${escapeHtml(r.time)}
       </span>
     </div>
     <div class="recipe-body">
-      <div class="recipe-tags">${r.tags.map((t, j) => `${j > 0 ? '<span class="recipe-tag sep">·</span>' : ''}<span class="recipe-tag">${t}</span>`).join('')}</div>
-      <h3 class="recipe-title">${r.title}</h3>
-      <p class="recipe-desc">${r.desc}</p>
+      <div class="recipe-tags">${(r.tags || []).map((tag, j) => `${j > 0 ? '<span class="recipe-tag sep">·</span>' : ''}<span class="recipe-tag">${escapeHtml(tag)}</span>`).join('')}</div>
+      <h3 class="recipe-title">${escapeHtml(r.title)}</h3>
+      <p class="recipe-desc">${escapeHtml(r.desc)}</p>
       <div class="recipe-meta">
         <span class="recipe-meta-item">
           <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-          ${r.persons} pers.
+          ${escapeHtml(r.persons)} pers.
         </span>
         <span class="recipe-meta-item">
           <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          ${r.rating}
+          ${escapeHtml(r.rating)}
         </span>
         <span class="recipe-meta-item recipe-price" title="Budget estimatif">
           <span class="price-icon" aria-hidden="true">€</span>
@@ -317,17 +359,28 @@ const counterObserver = new IntersectionObserver((entries) => {
 }, { threshold: 0.5 });
 
 /* ═══════════════════════ MODAL ═══════════════════════ */
+function getSafeHttpUrl(value) {
+  try {
+    const url = new URL(value);
+    return ['http:', 'https:'].includes(url.protocol) ? url : null;
+  } catch {
+    return null;
+  }
+}
+
 function getModalMediaHTML(r) {
   const ytId = getYoutubeId(r.videoUrl || r.sourceUrl);
   if (ytId) {
-    return `<iframe src="https://www.youtube.com/embed/${ytId}" title="Vidéo : ${r.title}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>`;
+    return `<iframe src="https://www.youtube.com/embed/${ytId}" title="Vidéo : ${escapeHtml(r.title)}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>`;
   }
-  return `<img src="${getRecipeImageSrc(r)}" alt="${r.title}"><div class="modal-img-overlay" aria-hidden="true"></div>`;
+  return `<img src="${escapeHtml(getRecipeImageSrc(r))}" alt="${escapeHtml(r.title)}"><div class="modal-img-overlay" aria-hidden="true"></div>`;
 }
 
 function getVideoEmbedHTML(r) {
   if (!r.videoUrl || getYoutubeId(r.videoUrl || r.sourceUrl)) return '';
-  return `<div class="modal-video-link"><a href="${r.videoUrl}" target="_blank" rel="noopener noreferrer">Voir la vidéo originale sur ${r.sourcePlatform || 'la plateforme'}</a></div>`;
+  const url = getSafeHttpUrl(r.videoUrl);
+  if (!url) return '';
+  return `<div class="modal-video-link"><a href="${escapeHtml(url.href)}" target="_blank" rel="noopener noreferrer">Voir la vidéo originale sur ${escapeHtml(r.sourcePlatform || 'la plateforme')}</a></div>`;
 }
 
 function openRecipeById(id) {
@@ -345,22 +398,22 @@ function openRecipe(index) {
   imgEl.setAttribute('aria-label', r.title);
 
   document.getElementById('modalBody').innerHTML = `
-    ${r.badge ? `<span class="modal-badge">${r.badge}</span>` : ''}
-    <h2 id="modalTitle">${r.title}</h2>
-    <p class="modal-desc" id="modalDescription">${r.desc}</p>
+    ${r.badge ? `<span class="modal-badge">${escapeHtml(r.badge)}</span>` : ''}
+    <h2 id="modalTitle">${escapeHtml(r.title)}</h2>
+    <p class="modal-desc" id="modalDescription">${escapeHtml(r.desc)}</p>
     ${getVideoEmbedHTML(r)}
     <div class="modal-meta-row">
       <span class="modal-meta-item">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
-        <strong>${r.time}</strong>
+        <strong>${escapeHtml(r.time)}</strong>
       </span>
       <span class="modal-meta-item">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
-        <strong>${r.persons} personnes</strong>
+        <strong>${escapeHtml(r.persons)} personnes</strong>
       </span>
       <span class="modal-meta-item">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-        <strong>${r.rating}/5</strong>
+        <strong>${escapeHtml(r.rating)}/5</strong>
       </span>
       <span class="modal-meta-item">
         <span class="price-icon" aria-hidden="true">€</span>
@@ -369,11 +422,11 @@ function openRecipe(index) {
     </div>
     <div class="modal-section">
       <h3>Ingrédients</h3>
-      <ul class="ingredients-list">${r.ingredients.map(i => `<li>${i}</li>`).join('')}</ul>
+      <ul class="ingredients-list">${r.ingredients.map(ingredient => `<li>${escapeHtml(ingredient)}</li>`).join('')}</ul>
     </div>
     <div class="modal-section">
       <h3>Préparation</h3>
-      <ol class="steps-list">${r.steps.map(s => `<li>${s}</li>`).join('')}</ol>
+      <ol class="steps-list">${r.steps.map(step => `<li>${escapeHtml(step)}</li>`).join('')}</ol>
     </div>
     <div class="modal-actions">
       ${STATIC_SITE ? '' : '<button id="favoriteButton" class="btn btn-ghost" type="button" onclick="toggleFavorite()">Ajouter aux favoris</button>'}

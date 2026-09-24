@@ -1,0 +1,15 @@
+{
+  "name": "tous-a-table-site",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build": "node scripts/build-pages.mjs",
+    "check": "node --check js/main.js && node --check scripts/build-pages.mjs && node --check scripts/cockpit-recipes.mjs",
+    "test": "node --test test/*.test.js",
+    "verify": "npm run check && npm test && npm run build"
+  }
+}
